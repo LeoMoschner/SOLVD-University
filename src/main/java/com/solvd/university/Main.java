@@ -8,7 +8,6 @@ public class Main {
 
     public static void main(String[] args) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchMethodException {
 
-        /** git test*/
         while (MenuManager.menuManagement()) {
         }
     }
