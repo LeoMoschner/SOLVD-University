@@ -4,8 +4,8 @@ public abstract class Person {
 
     private String fullName;
     private int age;
-    String phoneNumber;
-    String email;
+    private String phoneNumber;
+    private String email;
 
     public Person(String fullName, int age, String phoneNumber, String email) {
         this.fullName = fullName;
@@ -53,5 +53,6 @@ public abstract class Person {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
 }

@@ -4,8 +4,7 @@ public enum BankInfo {
 
     ACC_NAME("Leo.University.SOLVD"),
     ACC_NUM("123456798");
-
-    private String value;
+    private final String value;
 
     public String getValue() {
         return value;

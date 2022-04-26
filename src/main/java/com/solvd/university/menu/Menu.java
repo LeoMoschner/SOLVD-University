@@ -7,14 +7,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-public class Menu extends CheckInfo implements Printable<Integer> {
+public class Menu extends CheckInfo implements Printable {
 
     private final static Logger LOGGER = LogManager.getLogger(Menu.class);
-    private String statement;
-    private int options;
+    private final String statement;
+    private final int options;
     private int selection;
-    private UserInput util = new UserInput();
-
 
     public Menu(String statement, int options) {
         this.statement = statement;
@@ -31,11 +29,9 @@ public class Menu extends CheckInfo implements Printable<Integer> {
     }
 
     @Override
-    public Integer print () {
+    public void print() {
         LOGGER.info(this.toString());
         String userInput = UserInput.userInput();
         this.selection = Integer.parseInt(checkSelections(userInput, this.options));
-        return this.selection;
-
     }
 }

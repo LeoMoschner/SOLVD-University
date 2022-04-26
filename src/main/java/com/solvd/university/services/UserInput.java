@@ -36,7 +36,6 @@ public class UserInput extends CheckInfo {
         int schoolGrade = schoolGradeMenu.getselection();
         String phoneNumber = phoneNumberInput();
         String email = emailInput();
-
         // Generating the UniversityID
         final int[] largest = {0};
 

@@ -6,11 +6,11 @@ public class Connection {
 
     private Collection<?> dataBase;
 
-    public Connection (Collection<?> dataBase) {
+    public Connection(Collection<?> dataBase) {
         this.dataBase = dataBase;
     }
 
-    public Collection<?> getDataBase () {
+    public Collection<?> getDataBase() {
         return dataBase;
     }
 }

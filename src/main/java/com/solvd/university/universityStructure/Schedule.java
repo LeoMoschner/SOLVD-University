@@ -63,9 +63,7 @@ public class Schedule {
     public String toString() {
 
         String string;
-
         string = "\t\t" + this.getDay() + " from " + this.getStartHour() + " to " + this.getEndHour();
-
         return string;
     }
 

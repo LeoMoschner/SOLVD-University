@@ -9,11 +9,11 @@ public enum Days {
 
     final int dayNum;
 
-    public int getDayNum () {
+    public int getDayNum() {
         return dayNum;
     }
 
-    Days (int dayNum) {
+    Days(int dayNum) {
         this.dayNum = dayNum;
     }
 }

@@ -25,7 +25,7 @@ public class MenuManager {
     private static final ArrayList<Administrative> admins = DataBase.startAdminEmplDB();
     private static final LinkedList<Student> students = DataBase.startStudentDB(specialities);
 
-    private static void showDbWithThreads(){
+    private static void showDbWithThreads() {
         Connection connect1 = new Connection(students);
         Connection connect2 = new Connection(admins);
         User<Student> stu = new User<>(connect1);
@@ -60,18 +60,15 @@ public class MenuManager {
 
         Constructor[] constructors = Menu.class.getDeclaredConstructors();
         Parameter[] consPar = constructors[0].getParameters();
-        Menu studentIdMenu = (Menu)constructors[0].newInstance("Please enter a student ID. (Valid ID = 10)", 100000);
+        Menu studentIdMenu = (Menu) constructors[0].newInstance("Please enter a student ID. (Valid ID = 10)", 100000);
         Field[] fields = studentIdMenu.getClass().getDeclaredFields();
         Method selectionGetter = studentIdMenu.getClass().getDeclaredMethod("get" + fields[3].getName());
-
-
 
         Menu exitMenu = new Menu("Dou you want to exit the program? \n" +
                 "\t1. Yes.\n" +
                 "\t2. No, take me back to the beginning.", 2);
 
         startMenu.print();
-
 
         switch (startMenu.getselection()) {
             case 1:
@@ -89,7 +86,7 @@ public class MenuManager {
                 studentMenu.print();
                 switch (studentMenu.getselection()) {
                     case 1:
-                        LOGGER.info(auxStudent.print());
+                        auxStudent.print();
                         break;
                     case 2:
                         int specialityIndex = auxStudent.getSpeciality().getIndex();
@@ -108,11 +105,13 @@ public class MenuManager {
                 Menu adminMenu = new Menu("\tPlease select an option:\n" +
                         "\t\t1. Check my info.\n" +
                         "\t\t2. Add approved subject to a student."
-                        +"\n\t\t3. Check data base.", 3);
+                        + "\n\t\t3. Check data base.", 3);
                 adminMenu.print();
 
                 switch (adminMenu.getselection()) {
-                    case 1:  LOGGER.info(admin.toString()); break;
+                    case 1:
+                        LOGGER.info(admin.toString());
+                        break;
                     case 2: {
                         studentIdMenu.print();
                         Student tempStudent = new Student();
@@ -129,7 +128,7 @@ public class MenuManager {
                         break;
                     }
                     case 3: {
-                        LOGGER.info ("Students and admin data base using threads: ");
+                        LOGGER.info("Students and admin data base using threads: ");
                         showDbWithThreads();
                         break;
                     }

@@ -1,12 +1,12 @@
 package com.solvd.university.services;
 
 
-public interface ISort <T> {
+public interface ISort<T> {
 
-        default T sort(T collection) {
+    default T sort(T collection) {
 
-            return null;
-        }
+        return null;
+    }
 
 
 }

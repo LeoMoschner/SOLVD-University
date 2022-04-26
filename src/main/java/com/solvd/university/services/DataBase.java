@@ -16,7 +16,6 @@ import java.util.*;
 public class DataBase implements ISort<LinkedList> {
 
 
-
     public static Speciality[] startSpecialityDB() {
 
         Speciality[] dataBase = new Speciality[3];

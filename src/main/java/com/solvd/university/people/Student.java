@@ -10,7 +10,7 @@ import com.solvd.university.universityStructure.IaddSubject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Student extends Person implements IaddSubject, IcheckUser<Student, LinkedList<Student>>, Printable<String> {
+public class Student extends Person implements IaddSubject, IcheckUser<Student, LinkedList<Student>>, Printable {
 
     private final static Logger LOGGER = LogManager.getLogger(Student.class);
     private int UniversityID;
@@ -26,7 +26,9 @@ public class Student extends Person implements IaddSubject, IcheckUser<Student, 
         this.schoolGrade = schoolGrade;
         this.speciality = speciality;
         this.speciality.getStudents().add(this);
-        this.semesterCost = (this.speciality.getBaseCost() * this.speciality.getSubjects().size()) / this.schoolGrade;
+        this.calculateCost(() -> {
+            this.semesterCost = (this.speciality.getBaseCost() * this.speciality.getSubjects().size() / this.schoolGrade);
+        });
 
     }
 
@@ -107,10 +109,14 @@ public class Student extends Person implements IaddSubject, IcheckUser<Student, 
     }
 
     @Override
-    public String print () {
+    public void print() {
         LOGGER.info(this.toString());
-        return null;
     }
+
+    public void calculateCost(ICalculateCost cost) {
+        cost.calculateCost();
+    }
+
 }
 
 

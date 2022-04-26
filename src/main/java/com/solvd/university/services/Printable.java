@@ -1,8 +1,7 @@
 package com.solvd.university.services;
 
-public interface Printable <T> {
+public interface Printable {
 
-    default T print() {
-       return null;
+    default void print() {
     }
 }

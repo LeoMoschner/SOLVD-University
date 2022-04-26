@@ -7,5 +7,5 @@ public interface IPay {
     BankInfo accountName = BankInfo.ACC_NAME;
     BankInfo accountNum = BankInfo.ACC_NUM;
 
-    void pay ();
+    void pay();
 }

@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-public class WordsCounter implements ISort<Map <String, Integer>> {
+public class WordsCounter implements ISort<Map<String, Integer>> {
 
     private static Logger LOGGER = LogManager.getLogger(WordsCounter.class);
     private static Map<String, Integer> wordsMap = new HashMap<>();

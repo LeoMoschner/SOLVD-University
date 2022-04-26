@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import com.solvd.university.people.Professor;
 import com.solvd.university.people.Student;
 
-public class Subject implements IaddStudent, IAdd<Student> {
+public class Subject implements IaddStudent {
 
     private String name;
     private ArrayList<Schedule> schedule = new ArrayList<>();
@@ -94,13 +94,5 @@ public class Subject implements IaddStudent, IAdd<Student> {
 
     }
 
-    @Override
-    public void add(Student student) {
-        this.getStudents().add(student);
-    }
-
-    public void add(Professor professor) {
-        this.getProfessors().add(professor);
-    }
 
 }

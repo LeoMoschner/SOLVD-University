@@ -15,7 +15,7 @@ public class Payment {
 
     private static final Logger LOGGER = LogManager.getLogger(Payment.class);
 
-    public static void pay (IPay pay) {
+    public static void pay(IPay pay) {
         pay.pay();
     }
 

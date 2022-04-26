@@ -31,14 +31,13 @@ public abstract class Employee extends Person {
     }
 
     public String toString() {
-        String string = "\n\tFull name: " + this.getFullName() + "\n\tEmployee ID: " + this.getEmployeeID()
+
+        return "\n\tFull name: " + this.getFullName() + "\n\tEmployee ID: " + this.getEmployeeID()
                 + "\n\tAge: " + this.getAge() + "\n\tPhone number: " + this.getPhoneNumber()
                 + "\n\tE-mail: " + this.getEmail() + "\n\tSalary: $" + this.salary;
-
-        return string;
     }
 
-    public void calculateSalary (ICalculateSalary salary) {
+    public void calculateSalary(ICalculateSalary salary) {
         salary.calculateSalary();
     }
 }

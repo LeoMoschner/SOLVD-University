@@ -8,7 +8,6 @@ public class Professor extends Employee implements IaddSubject {
     private final int SALARY_MODIFIER = 800;
     private int numOfSubjects;
 
-
     public Professor(String fullName, int age, String phoneNumber, String email, int employeeID) {
         super(fullName, age, phoneNumber, email, employeeID);
         this.calculateSalary(() -> {
